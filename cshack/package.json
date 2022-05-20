@@ -2,7 +2,7 @@
   "name": "cshack",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://{username}.github.io",
+  "homepage": "https://yubkush.github.io/CShack",
   "dependencies": {
     "-": "^0.0.1",
     "@emotion/react": "^11.9.0",

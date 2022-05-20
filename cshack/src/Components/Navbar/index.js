@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import history from '../../history';
+import Typography from '@mui/material/Typography';
+import AccessibleIcon from '@mui/icons-material/Accessible';
 
 export default class ButtonAppBar extends React.Component {
   render() {
@@ -23,7 +25,18 @@ export default class ButtonAppBar extends React.Component {
             <MenuIcon/>
           </IconButton>
         <Button color="inherit" onClick={() => window.location.href = "../../Login/index.js" }>Login</Button>
-        <Button color="inherit" onClick={() => history.push('../Categories')}>Categories</Button>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          HandIdea
+        </Typography>
+        <IconButton
+            size="large"
+            edge="end"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <AccessibleIcon/>
+          </IconButton>
         </Toolbar>
       </AppBar>
     </Box>
