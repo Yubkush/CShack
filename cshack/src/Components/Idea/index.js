@@ -5,6 +5,7 @@ import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import Vote from '../Vote';
 import IdeaContent from '../IdeaContent';
+import CommentCount from '../CommentCount';
 
 const ItemLeft = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -12,6 +13,7 @@ const ItemLeft = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: 'left',
   boxShadow: 'none',
+  width:"86%",
 }));
 const ItemCenter = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -23,16 +25,18 @@ const ItemCenter = styled(Paper)(({ theme }) => ({
   alignItems: 'center',
 }));
 
-export default function Idea({ catg, title, nunu }) {
+export default function Idea({ catg, title, nunu, commentCount, votes}) {
   return (
     <div>      
       <Stack
         direction="row"
+        justifyContent="flex-start"
         divider={<Divider orientation="vertical" flexItem />}
         spacing={2}
       >
-        <ItemCenter><Vote/> </ItemCenter>
+        <ItemCenter><Vote count={votes}/> </ItemCenter>
         <ItemLeft><IdeaContent catg={catg} title={title} nunu={nunu} /></ItemLeft>
+        <ItemCenter><CommentCount count={commentCount}/></ItemCenter>
       </Stack>
     </div>
   );
