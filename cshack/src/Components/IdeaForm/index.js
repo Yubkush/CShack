@@ -63,7 +63,7 @@ export default function IdeaForm() {
   return (
     <div>
       <Button variant="contained" onClick={handleClickOpen}>
-        Tell Us about your amazing idea you piece of shit
+        Tell Us about your amazing idea
       </Button>
       <Dialog open={open} onClose={handleCloseCancel}>
         <DialogTitle>Submit Idea</DialogTitle>

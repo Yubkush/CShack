@@ -40,47 +40,20 @@ export default function IdeasStack() {
     <Box sx={{ width: "75%" }}>
       <Stack spacing={2}>
         {ideas.map((idea) => {
+          let maxNumber = 45;
+          let randomNumber = Math.floor((Math.random() * maxNumber) + 1);
           return (
             <Item>
               <Idea
                 catg={idea.catg}
                 title={idea.ideaName}
                 nunu={idea.description}
-                commentCount={77}
+                commentCount={randomNumber}
                 votes={idea.votes}
               />
             </Item>
           );
         })}
-        <Item>
-          {" "}
-          <Idea
-            catg={"Blind"}
-            title={"poop my eyes"}
-            nunu={
-              "When i poop i cant see when to stop wiping. please help me with creating an app that connects me with people that can tell me if i have wiped enough. help me to create a better world and a whiter panties "
-            }
-            commentCount={64}
-          />{" "}
-        </Item>
-        <Item>
-          {" "}
-          <Idea
-            catg={"fdfdf"}
-            title={"i eat only from boats now"}
-            nunu={"boat"}
-            commentCount={6}
-          />{" "}
-        </Item>
-        <Item>
-          {" "}
-          <Idea
-            catg={"3"}
-            title={"sarai or sary"}
-            nunu={"i walk alone #shilo"}
-            commentCount={4}
-          />{" "}
-        </Item>
       </Stack>
     </Box>
   );
